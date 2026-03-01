@@ -1,0 +1,9 @@
+{
+    "include": ["smart_converter"],
+    "venvPath": ".",
+    "venv": ".venv",
+    "stubPath": ".venv/lib/python3.14/site-packages",
+    "typeCheckingMode": "strict",
+    "reportMissingModuleSource": "none",
+    "pythonVersion": "3.14"
+}

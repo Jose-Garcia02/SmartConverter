@@ -1,0 +1,5 @@
+# Smart Converter - Dependencias de Python
+# Instalar con: pip install -r requirements.txt
+
+pdf2docx>=0.5.10
+tqdm>=4.66.0

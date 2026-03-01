@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "smart-converter"
+version = "0.1.0"
+description = "Conversor multimedia y documental nativo para Linux/GNOME"
+readme = "README.md"
+license = {text = "GPL-3.0-or-later"}
+requires-python = ">=3.10"
+authors = [
+    {name = "Jose Garcia"},
+]
+keywords = ["converter", "ffmpeg", "imagemagick", "libreoffice", "gtk4", "gnome", "nautilus"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: X11 Applications :: GTK",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Topic :: Multimedia :: Sound/Audio :: Conversion",
+    "Topic :: Multimedia :: Video :: Conversion",
+    "Topic :: Multimedia :: Graphics :: Graphics Conversion",
+    "Topic :: Office/Business",
+]
+dependencies = [
+    "pdf2docx>=0.5.10",
+    "tqdm>=4.66.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "PyGObject-stubs>=2.10.0",
+]
+
+[project.scripts]
+smart-converter = "smart_converter.main:main"
+
+[project.urls]
+Homepage = "https://github.com/josegarcia/SmartConverter"
+Repository = "https://github.com/josegarcia/SmartConverter"
+Issues = "https://github.com/josegarcia/SmartConverter/issues"
+
+[tool.setuptools.packages.find]
+include = ["smart_converter*"]
+
+[tool.pyright]
+include = ["smart_converter"]
+venvPath = "."
+venv = ".venv"
+typeCheckingMode = "strict"
+reportMissingModuleSource = "none"
+pythonVersion = "3.10"
